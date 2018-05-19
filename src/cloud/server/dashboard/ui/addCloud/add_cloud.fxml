@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="addCloudPane" prefHeight="432.0" prefWidth="663.0" stylesheets="@addCloud.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cloud.server.dashboard.ui.addCloud.AddCloudController">
+   <children>
+      <VBox prefHeight="432.0" prefWidth="663.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="id" labelFloat="true" promptText="Enter Cloud ID">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="name" labelFloat="true" layoutX="20.0" layoutY="30.0" promptText="Enter Cloud Name">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextArea prefHeight="61.0" prefWidth="643.0" text="Please select the goal power (Watts) consumption for the server.&#10;Note: An alert will be issued if the server exceeds this goal.&#10;">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextArea>
+            <JFXSlider fx:id="watts" max="300.0" showTickLabels="true" showTickMarks="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXSlider>
+            <JFXTextArea layoutX="20.0" layoutY="120.0" prefHeight="61.0" prefWidth="643.0" text="Please select the goal CPU usage (Mhz) for the server.&#10;Note: An alert will be issued if the server exceeds this goal.&#10;">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextArea>
+            <JFXSlider fx:id="cpu" blockIncrement="250.0" layoutX="20.0" layoutY="120.0" majorTickUnit="250.0" max="4000.0" minorTickCount="1" showTickLabels="true" showTickMarks="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXSlider>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="saveBtn" contentDisplay="CENTER" onAction="#addCloud" prefHeight="88.0" prefWidth="250.0" text="Save">
+                     <HBox.margin>
+                        <Insets left="79.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelBtn" contentDisplay="CENTER" onAction="#cancel" prefHeight="88.0" prefWidth="250.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="6.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
